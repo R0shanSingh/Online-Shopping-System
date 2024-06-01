@@ -1,0 +1,786 @@
+/*-----------------------------------*\
+    # Mobile Media Query
+\*-----------------------------------*/
+
+@media screen and (max-width: 1250px) {
+    /* Global Classes Size Update */
+    html {
+        font-size: 56.25%;
+    }
+
+    /* Header */
+    #header-top .search-container {
+        width: 550px;
+    }
+
+    /* Banner */
+    #banner {
+        padding: 10rem;
+    }
+
+    /* Why shop with us */
+    #trust-container1 {
+        gap: 2rem;
+    }
+
+    #trust-container2 {
+        gap: 2rem;
+    }
+
+    /* Contact Page */
+    #contact-top {
+        padding: 0 3.5rem;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    /* Global Classes Size Update */
+    html {
+        font-size: 52%;
+    }
+
+    /* Div or Elements should be displayed only on Mobile */
+    .notMobile {
+        display: none;
+    }
+
+    .onMobile {
+        display: block;
+    }
+
+    #profile-dropdown-box {
+        display: none;
+    }
+
+    .phone-navigations {
+        display: block;
+    }
+
+    /* Modal */
+    #modal {
+        width: 60%;
+        margin-left: -30%;
+    }
+
+    #modal-login-form h3,
+    #modal-signup-form h3 {
+        padding-bottom: 10px;
+    }
+
+    #modal-image {
+        display: none;
+    }
+    
+    #modal-login-form {
+        width: 100%;
+    }
+    
+    #modal-signup-form {
+        width: 100%;
+    }
+
+    /* Header */
+    #header-top {
+        padding: 1.5rem;
+    }
+
+    #header-top .logo h2 {
+        font-size: var(--fs-lg);
+    }
+
+    #header-top .user-actions i {
+        font-size: var(--fs-lg);
+    }
+
+    /* Navigation */
+    #navbar {
+        padding: 0;
+    }
+
+    #navbar .nav-items {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: 46px;
+        right: -100%;
+        background-color: whitesmoke;
+        height: 100%;
+        width: 100%;
+        padding: 10px 30px;
+        gap: 15px;
+        transition: 0.4s all ease-in-out;
+        z-index: 20;
+    }
+
+    #navbar .nav-items li a {
+        font-size: 12px;
+        text-transform: capitalize;
+    }
+
+    /* Banner */
+    #banner {
+        height: 400px;
+    }
+
+    /* Shoes New Arrivals */
+
+    .shoes-new-arrivals-img {
+        height: 450px;
+    }
+
+    /* Why shop with us */
+    #trust {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #trust-container2 {
+        gap: 100px;
+    }
+
+    #searched-products {
+        padding: 0 5rem;
+    }
+
+    /* Profile Page */
+    .info-box {
+        padding: 2rem 5rem;
+    }
+
+    /* About Page */
+
+    #about-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #about-body-img {
+        width: 80%;
+    }
+
+    #about-body-content {
+        width: 80%;
+    }
+
+    /* Contact Page */
+    #contact-top {
+        padding: 0 3rem;
+    }
+
+    #contact-top p {
+        padding: 0.8rem 15rem;
+    }
+
+    /* Checkout Page */
+    #checkout-body {
+        padding: 3rem 2rem;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    /* Cart Page */
+    #cart {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cart-details {
+        width: 100%;
+    }
+
+    #cart-price {
+        width: 100%;
+    }
+
+    #price-container {
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    /* Global Classes Size Update */
+    html {
+        font-size: 50%;
+    }
+
+    /* Banner Section */
+    #banner {
+        height: 300px;
+        padding: 3rem;
+    }
+
+    #banner-content {
+        line-height: 4.5rem;
+    }
+    
+    #banner-content h3 {
+        font-size: var(--fs-lg);
+    }
+    
+    #banner-content h1 {
+        font-size: 3rem;
+    }
+    
+    #banner-content h2 {
+        font-size: var(--fs-md);
+    }
+    
+    #banner-content button {
+        font-size: 11px;
+        padding: 6px 8px;
+    }
+
+    /* Shoes New Arrivals */
+
+    .shoes-new-arrivals-img {
+        height: 400px;
+    }
+
+    /* Products Page */
+    #product {
+        flex-direction: column;
+        padding: 1.8rem 2.6rem;
+    }
+
+    #product-images {
+        width: 100%;
+    }
+
+    #product-details {
+        width: 80%;
+    }
+
+    #product-review {
+        padding: 0 2.6rem;
+        padding-bottom: 1.8rem;
+    }
+
+    #related-products h1 {
+        margin: 1rem 2.6rem;
+    }
+
+    #user-reviews {
+        margin: 1.8rem 2.6rem;
+    }
+
+    /* Cart Page */
+    #cart {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #cart-details {
+        width: 100%;
+    }
+
+    #cart-price {
+        width: 100%;
+    }
+
+    /* Footer */
+    #footer-top {
+        flex-direction: column;
+    }
+
+    /* Profile Page */
+    #profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #profile-box1 {
+        width: 90%;
+    }
+    
+    #profile-box2 {
+        width: 90%;
+    }
+
+    #change-password-container form {
+        align-items: center;
+    }
+
+    /* Contact Page */
+    #contact-top p {
+        padding: 0.5rem 10rem;
+    }
+
+    #contact-body {
+        padding: 1rem;
+    }
+
+    #contact-info {
+        padding: 0;
+    }
+
+    #contact-form {
+        flex-direction: column;
+    }
+
+    #contact-form-content {
+        width: 100%;
+    }
+
+    #contact-img {
+        width: 100%;
+    }
+
+    /* Checkout Page */
+    #checkout-body {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #checkout-form {
+        width: 90%;
+    }
+
+    #checkout-total {
+        width: 90%;
+    }
+
+    #order-info {
+        padding: 1rem 6rem;
+    }
+
+    /* Page not Found */
+
+    .page-not-found-img {
+        width: 500px;
+    }
+
+    /* Popup Modal */
+    .confirm-popup {
+        height: 250px;
+        width: 400px;
+        margin-top: -125px; /* negative half of height */
+        margin-left: -200px; /* Negative half of width */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* Global Classes Size Update */
+    html {
+        font-size: 46%;
+    }
+
+    /* Header */
+    #header {
+        padding-top: 5px;
+    }
+
+    #header-top #logo {
+        width: 130px;
+    }
+
+    /* Bill Page */
+
+    .bill-header-box a {
+        width: 130px;
+    }
+
+    /* Explore Section */
+    #explore-more {
+        flex-direction: column;
+    }
+
+    #explore-img {
+        width: 100%;
+    }
+
+    #explore-desc {
+        order: -1;
+        width: 100%;
+        margin: 3rem 0;
+    }
+
+    /* Shoes New Arrivals Section */
+
+    #shoes-new-arrivals {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shoes-new-arrivals-img {
+        height: 450px;
+        width: 90%;
+    }
+
+    #shoes-new-arrivals-img1 img {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+    
+    #shoes-new-arrivals-img2 img {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+    }
+
+    #shoes-new-arrivals-content {
+        width: 90%;
+        padding: 4.5rem 0;
+    }
+
+    /* Modal */
+    #modal {
+        height: 300px;
+        margin-top: -150px;
+    }
+
+    /* About Page */
+    #about-banner {
+        height: 220px;
+    }
+
+    #about-bottom-content {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 2rem;
+    }
+
+    .about-content-box {
+        width: 85%;
+    }
+
+    /* Checkout Page */
+
+    #checkout-header {
+        justify-content: space-between;
+        padding: 2rem;
+    }
+
+    #checkout-logo {
+        width: 130px;
+    }
+
+    /* Page not Found */
+
+    .page-not-found-img {
+        width: 400px;
+    }
+
+    /* My Orders Page */
+
+    .my-orders-box {
+        flex-direction: column;
+        gap: 1.7rem;
+        padding: 1rem;
+    }
+
+    /* Bill Page */
+
+    .bill-header {
+        padding: 2rem 4.5rem;
+    }
+
+    .bill-info {
+        padding: 2rem 4.5rem;
+    }
+
+    .bill-info-date {
+        align-items: flex-start;
+    }
+
+    .bill-product-details {
+        margin: 2rem 4.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* Global Classes Size Update */
+    html {
+        font-size: 44%;
+    }
+
+    /* Header */
+    #header-top #logo {
+        width: 110px;
+    }
+
+    /* Bill Page Logo */
+
+    .bill-header-box a {
+        width: 110px;
+    }
+
+    /* Banner Section */
+    #banner {
+        height: 200px;
+        background-position: right;
+        padding: 1.5rem;
+    }
+
+    /* Explore Section */
+    #explore-more #btn1 {
+        margin-bottom: 1rem;
+    }
+
+    /* Collections Section */
+
+    #collections-content {
+        height: 900px;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    #collection-box1,
+    #collection-box2,
+    #collection-box3 {
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Shoes New Arrivals Section */
+
+    .shoes-new-arrivals-img {
+        height: 350px;
+        width: 100%;
+    }
+
+    #shoes-new-arrivals-content {
+        width: 100%;
+    }
+
+    /* Whu shop with us */
+    #trust {
+        padding: 0;
+    }
+
+    /* Modal */
+    #modal {
+        width: 80%;
+        margin-left: -40%;
+    }
+
+    /* profile Page */
+
+    #profile-details {
+        padding: 2rem;
+    }
+
+    #profile-box1 {
+        width: 100%;
+    }
+    
+    #profile-box2 {
+        width: 100%;
+    }
+
+    /* About Page */
+    #about-body {
+        padding: 1.5rem;
+    }
+
+    #about-body-img {
+        width: 100%;
+        padding: 0;
+    }
+
+    #about-body-content {
+        width: 100%;
+    }
+
+    /* Cart Page */
+    #no-products-cart {
+        height: 300px;
+    }
+
+    #no-products-cart img {
+        width: 200px;
+    }
+
+    /* Product Page */
+    .user-comment {
+        padding: 0.6rem 3rem;
+    }
+
+    #no-review-yet-box {
+        flex-direction: column;
+    }
+
+    /* Contact Page */
+    #contact-top p {
+        padding: 0;
+    }
+
+    #contact-info {
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+
+    /* Checkout Page */
+
+    #checkout-footer {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    #checkout-logo {
+        width: 110px;
+    }
+
+    #order-info {
+        padding: 1rem 4rem;
+    }
+
+    /* Page not Found */
+
+    .page-not-found-img {
+        width: 300px;
+    }
+
+    /* My Orders Page */
+
+    .my-orders {
+        padding: 1rem 2rem;
+    }
+
+    /* Bill Page */
+
+    .bill-header {
+        padding: 2rem 2rem;
+    }
+
+    .bill-header-box h1 {
+        font-size: 1.8rem;
+        letter-spacing: 2px;
+    }
+    
+    .bill-header-box h2 {
+        font-size: 1.6rem;
+        padding-bottom: 3px;
+    }
+
+    .bill-header-box span {
+        font-size: 1.4rem;
+    }
+
+    /* Popup Modal */
+    .confirm-popup {
+        height: 200px;
+        width: 80%;
+        margin-top: -100px; /* negative half of height */
+        margin-left: -40%; /* Negative half of width */
+    }
+
+    .popup-content i {
+        margin-bottom: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    /* Global Classes Size Update */
+    html {
+        font-size: 42%;
+    }
+
+    /* Why shop with us */
+    #trust-container1 {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #trust-container2 {
+        flex-direction: column;
+        gap: 0;
+    } 
+
+    /* Product Page */
+
+    #product-actions {
+        flex-direction: column;
+    }
+
+    /* Profile Page */
+    #profile-box1 img {
+        height: 150px;
+        width: 150px;
+    }
+
+    /* Page not Found */
+
+    .page-not-found-img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    /* Global Classes Size Update */
+    html {
+        font-size: 40%;
+    }
+
+    /* Header */
+    #header-top #logo {
+        width: 100px;
+    }
+
+    /* Bill Page Logo */
+
+    .bill-header-box a {
+        width: 100px;
+    }
+
+    /* Trending Products Section (Home) */
+    #trending-products {
+        padding: 1rem 2.5rem;
+    }
+
+    .product-box {
+        width: 200px;
+    }
+
+    .product-box img {
+        height: 200px;
+    }
+
+    /* Shoes New Arrivals */
+
+    #shoes-recent-launch {
+        padding: 1rem 2.5rem;
+    }
+
+    .shoes-new-arrivals-img {
+        height: 250px;
+    }
+
+    /* Searched Products */
+    #searched-products {
+        padding: 0;
+    }
+
+    /* Profile Page */
+    #profile-box1 img {
+        height: 130px;
+        width: 130px;
+    }
+
+    #profile-box2 h2 {
+        font-size: 1rem;
+    }
+
+    /* Cart Page */
+    #cart {
+        padding: 1.5rem;
+    }
+
+    #no-products-cart img {
+        width: 150px;
+    }
+
+    /* Modal */
+    #modal {
+        width: 98%;
+        margin-left: -49%;
+    }
+
+    /* Checkout Page */
+
+    #checkout-logo {
+        width: 100px;
+    }
+}

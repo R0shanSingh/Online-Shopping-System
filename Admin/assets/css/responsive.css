@@ -1,0 +1,164 @@
+/*-----------------------------------*\
+    # Media Query CSS
+\*-----------------------------------*/
+
+@media screen and (max-width: 950px) {
+    html {
+        font-size: 50%;
+    }
+
+    .website-data {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .website-data-box1 {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .website-data-box2 {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .insert-products-container form {
+        padding: 2rem 0;
+        width: 100%;
+    }
+
+    .product-form-control input,
+    .product-form-control textarea,
+    .product-form-control button {
+        width: 80%;
+    }
+
+    .product-form-control, .product-form-control-file {
+        align-items: center;
+    }    
+
+    .product-form-control select {
+        width: 80%;
+    }
+
+    .manage-order-product-img img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .unique-product-details-container form {
+        padding: 2rem 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 48%;
+    }
+
+    .admin-actions-section {
+        padding: 1.5rem;
+    }
+
+    .user-image img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .manage-order-section {
+        padding: 1.4rem 2rem;
+    }
+
+    .manage-order-product-img img {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 45%;
+    }
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+    .website-data {
+        gap: 1rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .website-data-box1 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .website-data-box2 {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .user-image img {
+        height: 35px;
+        width: 35px;
+    }
+
+    .manage-order-product {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 40%;
+    }
+
+    .insert-category-container {
+        padding: 1rem;
+    }
+
+    .insert-category-form {
+        width: 100%;
+    }
+
+    .category-form-control {
+        width: 100%;
+        align-items: center;
+    }
+
+    .category-form-control input, 
+    .category-form-control button {
+        width: 90%;
+    }
+
+    .admin-actions-section h3 {
+        text-align: center;
+    }    
+
+    .admin-actions-section {
+        padding: 1rem;
+    }
+
+    .admin-actions {
+        flex-direction: column;
+    }
+
+    .user-image img {
+        height: 30px;
+        width: 30px;
+    }
+
+    .manage-order-product-img {
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .manage-order-product-img img {
+        height: 120px;
+        width: 120px;
+    }
+}

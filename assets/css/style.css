@@ -1,0 +1,2474 @@
+/* Global CSS and Utility Classes */
+@import url('./global.css');
+
+/*-----------------------------------*\
+    # Modal ( Pop up )
+\*-----------------------------------*/
+
+#modal-close-overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 0.3s all ease-in-out;
+}
+
+#modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 999;
+    height: 400px;
+    width: 800px;
+    margin-top: -200px; /* negative half of height */
+    margin-left: -400px; /* Negative half of width */
+    background-color: whitesmoke;
+    display: none;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+}
+
+#modal a {
+    cursor: pointer;
+}
+
+#modal-image {
+    height: 100%;
+    width: 50%;
+}
+
+#modal-image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#modal-login-form {
+    width: 50%;
+    display: flex;
+    pointer-events: all;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+#modal-signup-form {
+    width: 50%;
+    display: none;
+    pointer-events: none;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+#modal-admin-form {
+    width: 50%;
+    display: none;
+    pointer-events: none;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+#modal-close-btn {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    z-index: 100;
+}
+
+#modal-close-btn i {
+    color: #fff;
+    font-size: 1.6rem;
+    padding: 5px 7px;
+    cursor: pointer;
+}
+
+#modal-login-form h3,
+#modal-signup-form h3,
+#modal-admin-form h3 {
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.modal-input-box {
+    position: relative;
+    padding: 0.6rem 2.5rem;
+    text-align: center;
+}
+
+.modal-input-box input {
+    font-size: 1.6rem;
+    height: 40px;
+    width: 100%;
+    padding: 0 1rem;
+    border-radius: 6px;
+    border: 2px solid #cacaca;
+    outline: none;
+}
+
+.modal-input-box button {
+    height: 40px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.6rem;
+    color: #fff;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.modal-input-box button:hover {
+    background-color: var(--main-color-dark);
+}
+
+.modal-input-box i {
+    font-size: 1.3rem;
+    color: var(--gray);
+    position: absolute;
+    top: 50%;
+    right: 9%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}  
+
+.modal-input-box a {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.modal-input-box a:hover {
+    text-decoration: underline;
+}
+
+.modal-input-box p {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/*-----------------------------------*\
+    # Header Top
+\*-----------------------------------*/
+
+#header {
+    box-shadow: 0 5px 10px 0 #aaaa; 
+    position: relative;
+    background-color: white;
+    padding: 0 2rem;
+}
+
+#header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5rem 3.2rem;
+}
+
+#header-top #logo {
+    width: 165px;
+}
+
+#header-top #logo img {
+    width: 100%;
+}
+
+#header-top .search-container {
+    width: 800px;
+}
+
+#header-top .search-container input {
+    width: 100%;
+    padding: 0.8rem 2rem;
+    font-size: var(--fs-md);
+    border-radius: 5px;
+    outline: none;
+    border: 2px solid #cacaca;
+}
+
+#header-top .user-actions i {
+    color: var(--text-dark);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#hamburger {
+    margin-left: 10px;
+}
+
+#show-dropdown:hover #profile-dropdown {
+    display: block;
+    pointer-events: all;
+}
+
+/* Profile after Login */
+#profile-dropdown-box {
+    display: flex;
+    gap: 2rem;
+    position: relative;
+}
+
+#profile-dropdown-box a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}   
+
+
+/* Dropdown */
+#profile-dropdown {
+    display: none;
+    pointer-events: none;
+    background-color: whitesmoke;
+    box-shadow: 0 0 15px 1px #7c7c7c;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+    width: 180px;
+    z-index: 20;
+    padding: 1.2rem 1.5rem;
+}
+
+#profile-dropdown-title {
+    display: flex;
+    flex-direction: column;
+    cursor: default;
+}
+
+#profile-dropdown em {
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+#profile-dropdown span {
+    font-size: 2rem;
+    padding: 5px 0;
+}
+
+#dropdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-top: 2px solid var(--text-dark);
+    padding-top: 10px;
+    padding-bottom: 2px;
+}
+
+#dropdown-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+#profile-dropdown #dropdown-title {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+} 
+
+#profile-dropdown a {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+} 
+
+#dropdown-content a:hover {
+    color: var(--main-color);
+}
+
+/*-----------------------------------*\
+    # Header Navigation
+\*-----------------------------------*/
+
+#navbar {
+    padding: 0 10.6rem;
+    padding-bottom: 1.5rem;
+}
+
+#navbar .nav-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#navbar .nav-items li a {
+    position: relative;
+    font-size: var(--fs-md);
+    color: var(--text-dark);
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: 0.2s all ease-in-out;
+}
+
+#navbar .nav-items li a:hover {    
+    color: var(--main-color);
+}
+
+.nav-close-btn i {
+    color: var(--main-color);
+    font-size: 15px;
+}
+
+#navbar .nav-items .nav-profile-pic  h3 {
+    font-size: var(--fs-lg);
+    color: var(--text-dark);
+}
+
+.nav-profile-pic i {
+    font-size:var(--fs-xl);
+    color: var(--text-dark);
+}
+
+#mobile-login-signup-btn {
+    color: var(--main-color);
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Mobile Search Box */
+#mobile-search-box {
+    position: relative;
+}
+
+#search-container-2 {
+    background-color: whitesmoke;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 46px;
+    left: -100%;
+    z-index: 20;
+    padding: 2rem 3rem;
+}
+
+#search-container-2 input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    font-size: 1.6rem;
+    outline: none;
+    border: 2px solid #cacaca;
+}
+
+/*-----------------------------------*\
+    # Main Section
+\*-----------------------------------*/
+
+#banner {
+    height: 520px;
+    width: 100%;
+    background: url('../images/banner/banner-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20rem;
+}
+
+#banner-content {
+    line-height: 5.6rem;
+    animation: fade-in-animation 1.2s ease-in-out;
+}
+
+#banner-content h3 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+#banner-content h1 {
+    color: var(--text-dark);
+    font-size: 4.2rem;
+    font-weight: 600;
+}
+
+#banner-content h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--gray);
+}
+
+#banner-content a {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+}
+
+/*-----------------------------------*\
+    # Collection Sedction
+\*-----------------------------------*/
+
+#collections {
+    padding: 1rem;
+}
+
+#collections-title h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    padding: 2rem 0;
+    color: var(--text-dark);
+}
+
+#collections-content {
+    height: 400px;
+    display: flex;
+    justify-content: space-evenly;
+    animation: fade-in-animation 1.2s ease-in-out;
+}
+
+.collection-box-content {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+}
+
+#collections span {
+    font-size: 2.9rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding: 0.8rem 0;
+}
+
+#collections span:hover {
+    cursor: default;
+}
+
+#collection-box1 {
+    background: url('../images/Collection/collection-1.jpg');
+}
+
+#collection-box2 {
+    background: url('../images/Collection/collection-10.jpg');
+}
+
+#collection-box3 {
+    background: url('../images/Collection/collection-5.jpg');
+}
+
+#collection-box1,
+#collection-box2,
+#collection-box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    height: 100%;
+    width: 30%;
+}
+
+/*-----------------------------------*\
+    # Trending Products
+\*-----------------------------------*/
+
+.trending-products {
+    padding: 1.5rem 8rem;
+}
+
+.trending-product-title {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--text-dark);
+}
+
+.trending-product-title-h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    padding: 1rem 0;
+}
+
+/*-----------------------------------*\
+    # Explore More Section
+\*-----------------------------------*/
+
+#explore-more {
+    background-color: var(--main-color-light);
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+}
+
+#explore-img {
+    height: auto;
+    width: 50%;
+}
+
+#explore-img img {
+    height: 100%;
+    width: 100%;
+}
+
+#explore-desc {
+    width: 50%;
+    margin: auto 0;
+    padding: 0 6rem;
+}
+
+#explore-desc h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 1.5rem 0;
+}
+
+#explore-desc p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 2rem;
+}
+
+#explore-desc a {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 1rem 3rem;
+    margin-right: 1rem;
+    background-color: var(--main-color-light);
+    outline: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+#explore-desc a:hover {
+    background-color: #fff;
+    color: var(--main-color-dark);
+}
+
+/*-----------------------------------*\
+    # Shoes New Arrivals
+\*-----------------------------------*/
+
+#shoes-new-arrivals {
+    display: flex;
+    margin: 2rem 5rem;
+    border-radius: 2rem;
+}
+
+.shoes-new-arrivals-img {
+    height: 520px;
+    width: 35%;
+}
+
+.shoes-new-arrivals-img img {
+    height: 100%;
+    width: 100%;
+}
+
+#shoes-new-arrivals-img1 img {
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+}
+
+#shoes-new-arrivals-img2 img {
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+#shoes-new-arrivals-content {
+    width: 30%;
+    background-color: #eeeded;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+#shoes-new-arrivals-content h4 {
+    color: var(--main-color);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7rem;
+}
+
+#shoes-new-arrivals-content h2 {
+    color: var(--text-dark);
+    font-size: 3.5rem;
+    font-weight: 800;
+}
+
+#shoes-new-arrivals-content h3 {
+    color: var(--main-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#shoes-new-arrivals-content a {
+    color: #fff;
+    background-color: var(--text-dark);
+    padding: 0.7rem 3.5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+#shoes-new-arrivals-content a:hover {
+    background-color: #fff;
+    color: var(--text-dark);
+    border: 2px solid var(--text-dark);
+}
+
+/*-----------------------------------*\
+    # Shoes Recent Launch
+\*-----------------------------------*/
+
+#shoes-recent-launch {
+    padding: 1.5rem 8rem;
+}
+
+#shoes-recent-launch-title {
+    padding: 1rem 0;
+    /* margin-bottom: 2rem; */
+}
+
+#shoes-recent-launch-title h2 {
+    font-size: 2.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--text-dark);
+}
+
+/*-----------------------------------*\
+    # Why shop with us Styling
+\*-----------------------------------*/
+
+#shop-with-us {
+    border: 1px solid var(--text-dark);
+    border-radius: 2rem;
+    margin: 0 5rem;
+    margin-bottom: 2rem;
+}
+
+#shop-with-us h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--text-dark);
+    margin-top: 1rem;
+}
+
+#trust {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#trust-container1 {
+    display: flex;
+    gap: 6rem;
+}
+
+#trust-container2 {
+    display: flex;
+    gap: 6rem;
+}
+
+.trust-box {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.trust-box img {
+    width: 50px;
+}
+
+.trust-box h3 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    padding: 0.8rem 0;
+}
+
+.trust-box span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/*-----------------------------------*\
+    # Shop Page
+\*-----------------------------------*/
+
+.products-section {
+    padding: 1rem 8rem;
+    margin-top: 2rem;
+}
+
+#shop-banner {
+    height: 320px;
+    width: 100%;
+    background: url('../images/banner/b1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#shop-banner h2 {
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+
+/*-----------------------------------*\
+    # Products Page Styling
+\*-----------------------------------*/
+
+#product {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 6rem;
+    margin-top: 2rem;
+}
+
+#product-images {
+    width: 40%;
+    padding: 1rem 2.5rem;
+}
+
+#product-images img {
+    width: 100%;
+}
+
+#product-bottom-images {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pro-small-img {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#product-details {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 2.5rem;
+}
+
+#product-title h3 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.product-rating-box {
+    border-radius: 25px;
+    padding: 0.6rem 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: #26a541;
+    color: white;
+}
+
+.product-rating-box i {
+    color: var(--orange);
+}
+
+#product-price span,
+#product-price i {
+    font-size: var(--fs-lg);
+    color: var(--text-dark);
+}
+
+#product-spec select {
+    padding: 0.5rem;
+    font-size: var(--fs-md);
+    outline: none;
+    border: 1px solid #000;
+}
+
+#product-desc {
+    padding: 1.5rem 0;
+}
+
+#product-desc h2 {
+    font-size: var(--fs-lg);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#product-desc p {
+    font-size: var(--fs-md);
+    font-weight: 400;
+}
+
+#product-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+#product-actions {
+    display: flex;
+    gap: 15px;
+}
+
+#product-actions button {
+    padding: 1rem 3.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: var(--main-color);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#product-actions button:hover {
+    background-color: var(--main-color-dark);
+}
+
+#product-actions a {
+    padding: 1rem 3.5rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: #fff;
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+#product-actions a:hover {
+    background-color: var(--main-color-dark);
+    border: 2px solid var(--main-color-dark);
+}
+
+#added-to-cart {
+    background-color: white!important;
+    padding-left: 1.5rem!important;
+    padding-right: 1.5rem!important;
+    color: #067D62!important;
+    border: 2px solid #067D62!important;
+}
+
+/* Product Review */
+
+#product-review {
+    padding: 0 8rem;
+    padding-bottom: 2rem;
+}
+
+#product-review h3 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding: 1.2rem 0;
+
+}
+
+/* If User is not Login */
+
+.login-to-review-box {
+    background-color: whitesmoke;
+    text-align: center;
+    line-height: 3.7rem;
+    padding: 6rem 0;
+}
+
+.login-to-review-box h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+}
+
+.login-to-review-box span {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* Product Star Rating */
+
+#product-star-rating {
+    padding-bottom: 1rem;
+}
+
+#product-star-rating i {
+    font-size: 2.2rem;
+    color: gold;
+    cursor: pointer;
+    padding: 0 3px;
+}
+
+#product-star-rating i:hover {
+    transform: scale(1.1);
+}
+
+/* Form */
+#product-review form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+#product-review form textarea {
+    width: 100%;
+    outline: none;
+    padding: 1rem;
+    font-size: 1.8rem;
+}
+
+#product-review form input {
+    align-self: flex-start;
+    padding: 0.8rem 4rem;
+    border-radius: 2px;
+}
+
+/* If User is not Logged in */
+
+#no-review-yet-box {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 6rem 0;
+}
+
+#no-review-yet-box i {
+    font-size: 3rem;
+    color: var(--text-dark);
+}
+
+#no-review-yet-box span {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+/* Related Products */
+
+#related-products h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    letter-spacing: 0.3rem;
+    margin: 1.5rem 8rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--text-dark);
+}
+
+/* Product Comments */
+
+#user-reviews {
+    margin: 0 8rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2rem;
+}
+
+#user-reviews h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.user-review-and-comments {
+    background-color: whitesmoke;
+    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px gray;
+    display: none;
+    pointer-events: none;
+}
+
+.user-info {
+    display: flex;
+}
+
+.user-image img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 2px solid #cacaca;
+}
+
+.user-data {
+    padding: 0 1.2rem;
+}
+
+.user-data h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.user-data span {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.user-comment span {
+    border-radius: 25px;
+    padding: 0.6rem 1rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: #26a541;
+    color: white;
+}
+
+.user-comment {
+    padding: 1rem 6rem;
+}
+
+.user-comment p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    padding-top: 1.5rem;
+}
+
+.user-comment .product-rating-box {
+    display: inline;
+}
+
+.more-comments {
+    text-align: center;
+}
+
+.more-comments span {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--main-color);
+    text-decoration: underline;
+    cursor: default;
+}
+
+.more-comments button {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--main-color);
+    text-decoration: underline;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.more-comments button:hover {
+    color: var(--main-color-light);
+}
+
+.more-comments #viewing-all-reviews {
+    display: none;
+}
+
+/*-----------------------------------*\
+    # Cart Page
+\*-----------------------------------*/
+
+#cart {
+    display: flex;
+    padding: 2rem 3rem;
+    column-gap: 2rem;
+}
+
+#cart-details {
+    width: 75%;
+    border-radius: 5px;
+}
+
+#cart-title h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--text-dark);
+    padding: 2rem 0;
+}
+
+.cart-items {
+    overflow-x: auto;
+    padding-bottom: 2rem;
+}
+
+.cart-items::-webkit-scrollbar {
+    height: 4px;
+    width: 7px;
+}
+
+.cart-items::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: rgb(255,62,183);
+    background: linear-gradient(90deg, rgba(255,62,183,1) 0%, rgba(255,62,62,1) 48%, rgba(255,149,62,1) 100%);
+}
+
+.cart-items table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-items thead {
+    color: #fff;
+    background: rgb(255,62,183);
+    background: linear-gradient(90deg, rgba(255,62,183,1) 0%, rgba(255,62,62,1) 48%, rgba(255,149,62,1) 100%);
+    border: 1px solid rgb(255,62,183);
+}
+
+.cart-items thead th {
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 1.2rem;
+}
+
+/* .cart-items thead th:nth-child(2) {
+    text-align: start;
+} */
+
+.cart-items tbody td {
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding: 1.2rem;
+    color: var(--text-dark);
+    text-align: center;
+    border: 1px solid rgb(255,62,183);
+}
+
+.cart-items tbody td:nth-child(2) {
+    text-align: start;
+}
+
+.cart-items tbody td img {
+    height: 120px;
+    width: 120px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.cart-items tbody form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.cart-items tbody td input {
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 55px;
+    padding: 0.5rem;
+    padding-left: 1.2rem;
+    outline: none;
+    border: 1px solid var(--gray);
+    cursor: pointer;
+}
+
+.cart-items tbody td button {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    color: #14a44d;
+    background-color: #fff;
+    border: 1px solid #14a44d;
+    outline: none;
+    cursor: pointer;
+}
+
+.cart-items tbody td button:hover {
+    color: #fff;
+    background-color: #14a44d;
+}
+
+.cart-items tbody td a {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 0.6rem 2rem;
+    color: var(--main-color);
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid red;
+    outline: none;
+    margin: 2rem 0;
+    cursor: pointer;
+}
+
+.cart-items tbody td a:hover {
+    color: #fff;
+    background-color: red;
+}
+
+/* Cart Total Container */
+
+#cart-price {
+    width: 25%;
+}
+
+#price-container {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 2rem 3rem;
+    margin-top: 6rem;
+}
+
+#cart-price hr {
+    margin: 2rem 0;
+}
+
+.total-price-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+}
+
+.total-price-box h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.total-price-box span {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+#checkout-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+#checkout-btn #btn1 {
+    margin: 1rem 0;
+    background-color: #14a44d;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#checkout-btn #btn1:hover {
+    background-color: var(--green);
+}
+
+#checkout-btn #btn2 {
+    background-color: #fff;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: red;
+    outline: none;
+    border: 1px solid red;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+}
+
+#checkout-btn #btn2:hover {
+    color: #fff;
+    background-color: red;
+}
+
+#no-products-cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+}
+
+#no-products-cart img {
+    width: 400px;
+}
+
+/*-----------------------------------*\
+    # Profile Page
+\*-----------------------------------*/
+
+#profile-details {
+    padding: 3rem 6rem;
+    background-color: #e2e8f0;
+}
+
+#profile-container {
+    display: flex;
+    gap: 1rem;
+    background-color: #e2e8f0;
+}
+
+#profile-box1 {
+    background-color: #fff;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem 0;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+#profile-box1 img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 1px solid gray;
+    object-fit: contain;
+    object-position: center;
+}
+
+#profile-box1 i {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+#profile-box1 h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+#profile-box2 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 4px;
+}
+
+#profile-box2 h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    padding: 1.8rem 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+#user-details {
+    display: block;
+    pointer-events: all;
+    padding: 2rem 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    padding: 2rem 8rem;
+}
+
+.info-box h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    padding-right: 3rem;
+}
+
+.info-box button {
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #fff;
+    color: var(--green);
+    border: 2px solid var(--green);
+    outline: none;
+    cursor: pointer;
+    margin-right: 1.5rem;
+    border-radius: 4px;
+}
+
+.info-box button:hover {
+    color: #fff;
+    background-color: var(--green);
+}
+
+.info-box span {
+    font-size: 1.6rem;
+}
+
+.info-box input {
+    width: 20rem;
+    padding: 0.6rem 1rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #636363;
+    outline: none;
+    border: none;
+    border: 1px solid gray;
+}
+
+.delete-account {
+    justify-content: space-between;
+}
+
+.delete-account-btn {
+    font-size: 2rem;
+    font-weight: 500;
+    color: red;
+    border: 2px solid red;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 0.4rem 1.8rem;
+    cursor: pointer;
+}
+
+.delete-account-btn:hover {
+    background-color: red;
+    color: #fff;
+}
+
+#user-details .info-box:nth-child(3),
+#user-details .info-box:nth-child(5) {
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.info-box-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-box #change-password {
+    font-size: 2rem!important;
+    font-weight: 500!important;
+    color: var(--main-color)!important;
+    background-color: #fff!important;
+    cursor: pointer!important;
+    border: none!important;
+    padding: 0!important;
+    text-decoration: underline!important;
+}
+
+.info-box #change-password:hover {
+    color: red!important;
+}
+
+/* Change Password Div */
+
+#change-password-container {
+    display: none;
+    pointer-events: none;
+    padding: 2rem 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+}
+
+#change-password-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.info-pass-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    padding: 2rem 8rem;
+    position: relative;
+}
+
+.info-pass-box #go-back-to-profile {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    background-color: #fff;
+    cursor: pointer;
+    padding: 6px 1.5rem;
+    border-radius: 7px;
+}
+
+.info-pass-box #go-back-to-profile:hover {
+    color: #fff;
+    background-color: var(--main-color);
+}
+
+.info-pass-box label {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 1px;
+    margin-right: 2rem;
+}
+
+.info-pass-box input {
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 0.7rem 1.2rem;
+    border: 2px solid #cacaca;
+    outline: none;
+}
+
+.info-pass-box button {
+    padding: 0.5rem 2rem;
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #fff;
+    color: var(--green);
+    border: 2px solid var(--green);
+    outline: none;
+    cursor: pointer;
+    margin-right: 1.5rem;
+    border-radius: 4px;
+}
+
+.info-pass-box button:hover {
+    color: #fff;
+    background-color: var(--green);
+}
+
+#old-pass-eye-icon,
+#new-pass-eye-icon,
+#confirm-pass-eye-icon {
+    font-size: 1.3rem;
+    color: var(--gray);
+    position: absolute;
+    top: 62%;
+    right: 22%;
+    cursor: pointer;
+}
+
+/*-----------------------------------*\
+    # About Page
+\*-----------------------------------*/
+
+#about-banner {
+    height: 300px;
+    background: url('../images/banner/about-banner.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about-banner h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#about-banner p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+}
+
+/* About Body */
+#about-body {
+    display: flex;
+    padding: 2rem 4rem;
+}
+
+#about-body-img {
+    width: 50%;
+    padding: 0 3rem;
+}
+
+#about-body-img img {
+    width: 100%;
+}
+
+#about-body-content {
+    width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+#about-body-content h3 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    color: var(--text-dark);
+}
+
+#about-body-content p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/*-----------------------------------*\
+    # Contact Page
+\*-----------------------------------*/
+
+/* Contact Top */
+#contact-top {
+    height: 300px;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('../images/contact/contact-bg.jpg');
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8rem;
+}
+
+#contact-top h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 1rem 0;
+}
+
+#contact-top h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+    letter-spacing: 0.9rem;
+}
+
+#under-line div{
+    margin: 0 0.2rem;
+}
+
+#under-line div:nth-child(1),
+#under-line div:nth-child(3){
+    height: 3px;
+    width: 70px;
+    background: #f7327a;
+    border-radius: 5px;
+}
+
+#under-line{
+    display: flex;
+    align-items: center;
+}
+
+#under-line div:nth-child(2){
+    width: 10px;
+    height: 10px;
+    background: #f7327a;
+    border-radius: 50%;
+}
+
+#contact-top p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding: 1.5rem 25rem;
+    line-height: 2.5rem;
+}
+
+/* Conatact Body */
+#contact-body {
+    padding: 0 6rem;
+}
+
+#contact-info {
+    height: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-bottom: 1px solid var(--gray);
+}
+
+.contact-info-box {
+    text-align: center;
+    line-height: 25px;
+}
+
+.contact-info-box i {
+    font-size: 3rem;
+    color: var(--main-color);
+}
+
+.contact-info-box h3 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.contact-info-box p {
+    font-size: 1.4rem;
+    color: var(--gray);
+    font-weight: 400;
+}
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-form-content {
+    width: 50%;
+    font-size: 1.6rem;
+}
+
+.contact-form-control {
+    padding: 1rem 0;
+}
+
+.contact-form-control input {
+    height: 40px;
+    width: 100%;
+    padding: 0 1rem;
+    border-radius: 4px;
+    border: 2px solid #cacaca;
+    outline: none;
+}
+
+.contact-form-control:nth-child(2) {
+    display: flex;
+    gap: 12px;
+}
+
+.contact-form-control:nth-child(2) input {
+    width: 50%;
+}
+
+.contact-form-control textarea {
+    height: 100px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 2px solid #cacaca;
+    outline: none;
+    resize: none;
+}
+
+#contact-form-content button {
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+#contact-img {
+    width: 50%;
+}
+
+#contact-img img {
+    width: 100%;
+}
+
+/*-----------------------------------*\
+    # Footer Section
+\*-----------------------------------*/
+
+footer {
+    background-color: #212121;
+    font-size: 1.6rem;
+}
+
+#footer-top {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    border-bottom: 2px solid var(--gray);
+}
+
+.footer-box {
+    line-height: 3.5rem;
+}
+
+.footer-title h3 {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 1.2rem;
+}
+
+.footer-content p {
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: default;
+}
+
+.footer-title h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 70px;
+    background-color: var(--main-color);
+}
+
+.footer-content {
+    color: var(--gray);
+    font-size: var(--fs-md);
+}
+
+.footer-content li a {
+    color: var(--gray);
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.footer-content li a:hover {
+    color: var(--main-color);
+}
+
+#footer-bottom {
+    color: var(--gray);
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 2rem;
+    cursor: default;
+}
+
+/*-----------------------------------*\
+    # Checkout Page Styling
+\*-----------------------------------*/
+
+#checkout-title {
+    margin-top: 2rem;
+}
+
+#checkout-title h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+#checkout-body {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 3rem 4rem;
+}
+
+#checkout-form {
+    width: 60%;
+    /* background-color: #e2e8f0; */
+    background-color: whitesmoke;
+    /* background-color: #565959; */
+    border: 2px solid #cacaca;
+    padding: 1rem 3rem;
+    border-radius: 10px;
+}
+
+#checkout-form h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+#checkout-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.checkout-form-box {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.checkout-form-box label {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.checkout-form-box input, 
+.checkout-form-box textarea {
+    font-size: 1.7rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    outline: none;
+    border: 2px solid #cacaca;
+    border-radius: 6px;
+    resize: none;
+}
+
+.checkout-form-box span {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.checkout-form-box button {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--green);
+    width: 100%;
+    padding: 6px 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+}
+
+.checkout-form-box button:hover {
+    background-color: #14a44d;
+}
+
+#checkout-total {
+    width: 30%;
+}
+
+#checkout-total h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.checkout-total-box {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkout-total-box h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.checkout-total-box span {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+#checkout-total-btn1 a {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    width: 100%;
+    background-color: #14a44d;
+    border: 2px solid #14a44d;
+    color: #fff;
+    outline: none;
+    border-radius: 6px;
+    padding: 0.6rem 0;
+    margin: 0.7rem 0 1.5rem 0;
+}
+
+#checkout-total-btn1 a:hover {
+    background-color: green;
+    border-color: green;
+}
+
+#checkout-total-btn2 a {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    width: 100%;
+    background-color: #fff;
+    color: red;
+    outline: none;
+    border: 2px solid red;
+    border-radius: 6px;
+    padding: 0.6rem 0;
+    cursor: pointer;
+}
+
+#checkout-total-btn2 a:hover {
+    color: #fff;
+    background-color: red;
+}
+
+#checkout-total-container {
+    border: 2px solid #cacaca;
+    background-color: whitesmoke;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+/* Oder Info */
+
+#order-info {
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 9rem;
+    margin-bottom: 2rem;
+}
+
+#order-info h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+#order-info p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #5c5c5c;
+}
+
+/* Checkout header Styling */
+
+#checkout-header {
+    border-bottom: 2px solid #cacaca;
+    padding: 1.5rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#checkout-logo {
+    width: 165px;
+}
+
+#checkout-logo img {
+    width: 100%;
+}
+
+#checkout-header h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+#checkout-header i {
+    font-size: 3rem;
+    color: gray;
+}
+
+/* Checkout Footer Styling */
+
+#checkout-footer {
+    border-top: 2px solid #6c6c6c;
+    padding: 2.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: default;
+}
+
+#checkout-footer span {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #6c6c6c;
+}
+
+#checkout-footer span a {
+    color: var(--main-color);
+}
+
+#checkout-footer span a:hover {
+    color: var(--main-color-dark);
+    text-decoration: underline;
+}
+
+/*-----------------------------------*\
+    # My Orders Page Styling
+\*-----------------------------------*/
+
+/* No Orders */
+
+.my-orders-container {
+    width: 100%;
+    min-height: 500px;
+}
+
+.no-orders-found {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.no-orders-found i {
+    font-size: 5rem;
+    color: var(--text-dark);
+}
+
+.no-orders-found h2 {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+/* Contains Orders */
+
+.my-orders {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 2.5rem;
+    padding: 2rem 5rem;
+}
+
+
+.my-orders h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    padding-top: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.my-orders-box {
+    border: 2px solid #cacaca;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+}
+
+.my-orders-box h3 {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.my-orders-box span {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #6d6565;
+}
+
+.my-order-details,
+.my-order-price,
+.my-order-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.my-order-status .view-bill {
+    font-size: 1.7rem;
+    font-weight: 500;
+    color: #7b00b6;
+}
+
+.my-order-status .view-bill:hover {
+    text-decoration: underline;
+}
+
+.my-order-other-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.my-order-other-details .cancel-order {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: red;
+    border: 2px solid red;
+    background-color: #fff;
+    padding: 2px 0.8rem;
+    border-radius: 4px;
+}
+
+.my-order-other-details .cancel-order:hover {
+    color: #fff;
+    background-color: red;
+}
+
+/*-----------------------------------*\
+    # Bill Page Product Styling
+\*-----------------------------------*/
+
+.bill-container {
+    min-height: 86vh;
+    width: 100%;
+}
+
+.bill-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 8rem;
+    border-bottom: 3px solid var(--main-color);
+}
+
+.bill-header-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.bill-header-box a {
+    width: 165px;
+}
+
+.bill-header-box a img {
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+
+.bill-header-box h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.bill-header-box span {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 2px;
+}
+
+/* Bill Body */
+
+.bill-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding: 4rem 8rem 2rem 8rem;
+}
+
+.bill-info-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.bill-info-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.bill-info-desc h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.bill-info-desc h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.bill-info-desc span {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.bill-info-date h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.bill-info-date span {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+/* Bill Product Details */
+
+.bill-product-details {
+    margin: 2rem 8rem;
+    padding-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.bill-product-details::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+}
+
+.bill-product-details::-webkit-scrollbar-thumb {
+    background: rgb(255,62,183);
+    background: linear-gradient(90deg, rgba(255,62,183,1) 0%, rgba(255,62,62,1) 48%, rgba(255,149,62,1) 100%);
+    border-radius: 20px;
+}
+
+.bill-product-details table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.bill-product-details thead {
+    /* background-color: var(--main-color); */
+    border: 2px solid var(--main-color);
+    background: rgb(255,62,183);
+    background: linear-gradient(90deg, rgba(255,62,183,1) 0%, rgba(255,62,62,1) 48%, rgba(255,149,62,1) 100%);
+}
+
+.bill-product-details thead th {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 1.5rem;
+}
+
+.bill-product-details thead th:nth-child(1),
+.bill-product-details tbody td:nth-child(1) {
+    text-align: start;
+}
+
+.bill-product-details thead th:nth-child(2), 
+.bill-product-details thead th:nth-child(3), 
+.bill-product-details thead th:nth-child(4), 
+.bill-product-details tbody td:nth-child(2), 
+.bill-product-details tbody td:nth-child(3), 
+.bill-product-details tbody td:nth-child(4) {
+    text-align: center;
+}
+
+.bill-product-details tbody td {
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 1.5rem 1rem;
+    border: 2px solid var(--main-color);
+}
+
+/* Bill Table Footer */
+
+.bill-product-details tfoot {
+    padding: 6px 3px;
+}
+
+.bill-product-details tfoot th {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 5px 3px;
+}
+
+.bill-product-details tfoot td {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+    padding: 1rem 3px;
+    border: 2px solid var(--main-color);
+}
+
+.bill-product-details tfoot td span {
+    color: var(--main-color);
+}
+
+/* Bill Footer */
+
+.bill-footer-box1 h3 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    letter-spacing: 4px;
+    text-align: center;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.bill-footer-box2 {
+    /* background-color: var(--main-color); */
+    text-align: center;
+    padding: 2rem 0;
+    /* border-top: 2px solid var(--main-color); */
+    background: rgb(255,62,183);
+    background: linear-gradient(90deg, rgba(255,62,183,1) 0%, rgba(255,62,62,1) 48%, rgba(255,149,62,1) 100%);
+}
+
+.bill-footer-box2 span {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #FFF;
+    /* color: var(--text-dark); */
+}
